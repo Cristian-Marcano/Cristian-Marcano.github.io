@@ -1,0 +1,99 @@
+aside {
+    .contact { 
+        width: auto;
+        height: auto;
+
+        position: fixed;
+        left: 2rem;
+        bottom: 0;
+        z-index: 1;
+
+        ul {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            gap: 2rem;
+
+            list-style: none;
+
+            li:first-child a svg { fill: var(--tertiaryColorTools); }
+        
+            li:nth-child(2) a svg { fill: #fff; }
+
+            li:last-child a svg { fill: var(--secondaryColorTools); }
+        
+            &::after {
+                content: '';
+                width: 0.1rem;
+                height: 5rem;
+
+                display: block;
+
+                background: var(--primaryColorTools);
+            }
+        }
+    }
+
+    .widgets {
+        width: auto;
+        height: auto;
+
+        padding: 0.5rem 1rem;
+
+        position: fixed;
+        top: 0;
+        right: 3rem;
+        z-index: 1;
+
+        ul {
+            position: relative;
+
+            display: flex;
+            gap: 1.5rem;
+
+            list-style: none;
+
+            li:first-child a svg { fill: var(--secondaryColorTools); }
+            
+            li:last-child a svg { fill: var(--primaryColorTools); }
+
+            &::before { 
+                content: '';
+                width: 1.2rem;
+                height: 1.4rem;
+
+                position: absolute;
+                top: -0.5rem;
+                left: -2rem;
+
+                border-bottom: 0.1rem solid var(--primaryColorTools);
+                border-left: 0.1rem solid var(--primaryColorTools);
+            }
+
+            &::after { 
+                content: '';
+                width: 4rem;
+                height: 0.05rem;
+
+                position: absolute;
+                top: 50%;
+                right: 0;
+
+                background: var(--primaryColorTools);
+
+                transform: translateX(5rem);
+            }
+        }
+    }
+
+    li a {
+        svg { 
+            width: var(--widthIcon);
+            height: var(--heightIcon); 
+
+            transition: transform 0.3s ease-out;
+        }
+
+        &:hover svg { transform: scale(1.25); }
+    } 
+}

@@ -1,0 +1,22 @@
+:root {
+    --paddingTopMain: 11rem;
+
+    --h1Font: 4rem;
+    --h2Font: 3.2rem;
+
+    --listFont: 1.5rem;
+
+    --paragraphFont: 1.4rem;
+
+    --widthIcon: auto;
+    --heightIcon: 1.8rem;
+
+    --widthCoding01: 30%;
+    --widthCoding02: 23%;
+    --widthCoding03: 20%;
+    --widthCoding04: 27%;
+    --widthCoding05: 33%;
+    --widthCoding06: 23%;
+
+    --heightCoding: 1.8rem;
+}

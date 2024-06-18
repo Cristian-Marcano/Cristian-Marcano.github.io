@@ -1,0 +1,154 @@
+@import url(size.css);
+@import url(colors.css);
+
+@import url(navbar.css);
+@import url(aside.css);
+@import url(home.css);
+
+@import url(codeAnimation.css);
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", Arial, Helvetica, sans-serif;
+}
+
+html { 
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    color-scheme: var(--themeScroll);
+}
+
+body {
+    height: 300vh;
+
+    position: relative;
+
+    background: var(--firstColorBg);
+
+    > .coding {
+        width: 100%;
+        height: 100vh;
+
+        position: fixed;
+        z-index: -1;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+
+        background: transparent;
+
+        span {
+            height: var(--heightCoding);
+
+            position: absolute;
+            left: 1%;
+
+            display: flex;
+            gap: 10%;
+    
+            &::before, &::after {
+                content: '';
+    
+                height: 100%;
+    
+                display: inline-block;
+    
+                background: #dbdbdb5a;
+                border-radius: 0.3rem;
+            }
+        }
+
+        span:first-child {
+            width: var(--widthCoding01);
+
+            animation: upperCode-1 5s ease infinite normal both;
+
+            &::before { width: 40%; }
+
+            &::after { width: 50%; }
+        }
+
+        span:nth-child(2) {
+            width: var(--widthCoding02);
+
+            top: 10%;
+
+            animation: upperCode-2 5s ease infinite normal both;
+
+            &::before { width: 70%; }
+
+            &::after { width: 20%; }
+        }
+
+        span:nth-child(3) {
+            width: var(--widthCoding03);
+
+            top: 16%;
+
+            animation: upperCode-3 5s ease infinite normal both;
+
+            &::before { width: 20%; }
+
+            &::after { width: 70%; }
+        }
+
+        span:nth-child(4) {
+            width: var(--widthCoding04);
+
+            top: 27%;
+
+            animation: upperCode-4 5s 0.5s ease infinite normal both;
+
+            &::before { width: 22%; }
+
+            &::after { width: 32%; }
+        }
+
+        span:nth-child(5) {
+            width: var(--widthCoding05);
+
+            top: 33%;
+
+            background: #dbdbdb5a;
+            border-radius: 0.3rem;
+
+            animation: upperCode-5 5s 0.5s ease infinite normal both;
+        }
+
+        span:last-child {
+            width: var(--widthCoding06);
+
+            top: 39%;
+
+            animation: upperCode-6 5s 0.5s ease infinite normal both;
+
+            &::before { width: 10%; }
+
+            &::after { width: 80%; }
+        }
+    }
+
+    > span {
+        width: 10%;
+        height: 7.5vh;
+
+        position: absolute;
+        top: 0;
+
+        background: radial-gradient(var(--thirdColorBg) 70%, #09030e 100%);
+        border-radius: 50%;
+
+        filter: blur(75px);
+    }
+}
+
+main {
+    padding: var(--paddingTopMain) 1rem 1rem 1rem;
+
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,47 @@
+header nav {
+    width: auto;
+    height: auto;
+
+    position: fixed;
+    top: 50%;
+    right: 3rem;
+    z-index: 1;
+
+    transform: translateY(-50%);
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 0.75rem;
+
+        font-weight: 500;
+        font-size: var(--listFont);
+
+        text-align: right;
+        list-style: none;
+
+        li {
+            position: relative;
+
+            opacity: 0.4;
+
+            a { color: var(--primaryColorTools); text-decoration: none; }
+
+            &.active { opacity: 1; transform: translateX(-7rem); }
+
+            &::after {
+                content: '';
+                width: 13rem;
+                height: 0.15rem;
+
+                position: absolute;
+                top: 50%;
+                right: 0;
+
+                background: var(--primaryColorTools);
+
+                transform: translate(14rem, -50%);
+            }
+        }
+    }
+}

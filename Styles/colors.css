@@ -1,0 +1,13 @@
+:root {
+    --firstColorBg: #090c1a;
+    --secondColorBg: #2b2948;
+    --thirdColorBg: #283247;
+
+    --themeScroll: dark;
+
+    --primaryColorTools: #daa520;
+    --primaryColorToolsLight: #ffc853;
+    --primaryColorToolsDark: #ba8510;
+    --secondaryColorTools: #0785f4;
+    --tertiaryColorTools: #ff4500;
+}
