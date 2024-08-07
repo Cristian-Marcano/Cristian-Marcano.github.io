@@ -4,6 +4,12 @@
 @import url(navbar.css);
 @import url(aside.css);
 @import url(home.css);
+@import url(projects.css);
+@import url(skills.css);
+@import url(tooltipSkills.css);
+@import url(certificates.css);
+@import url(about.css);
+@import url(footer.css);
 
 @import url(codeAnimation.css);
 
@@ -17,13 +23,15 @@
 html { 
     overflow-x: hidden;
     scroll-behavior: smooth;
+    overscroll-behavior: none;
     color-scheme: var(--themeScroll);
 }
 
 body {
-    height: 300vh;
-
     position: relative;
+
+    display: flex;
+    flex-direction: column;
 
     background: var(--firstColorBg);
 
@@ -31,14 +39,13 @@ body {
         width: 100%;
         height: 100vh;
 
-        position: fixed;
+        position: absolute;
         z-index: -1;
 
         display: flex;
         flex-direction: column;
         align-items: center;
         
-
         background: transparent;
 
         span {
@@ -57,7 +64,7 @@ body {
     
                 display: inline-block;
     
-                background: #dbdbdb5a;
+                background: var(--colorCoding);
                 border-radius: 0.3rem;
             }
         }
@@ -113,7 +120,7 @@ body {
 
             top: 33%;
 
-            background: #dbdbdb5a;
+            background: var(--colorCoding);
             border-radius: 0.3rem;
 
             animation: upperCode-5 5s 0.5s ease infinite normal both;
@@ -132,23 +139,57 @@ body {
         }
     }
 
-    > span {
-        width: 10%;
-        height: 7.5vh;
+    header, main, aside, footer { 
+        .contact__list {
+            display: flex;
 
-        position: absolute;
-        top: 0;
+            li:first-child a svg { fill: var(--tertiaryColorTools); }
+            li:nth-child(2) a svg { fill: var(--fillColorLinks); }
+            li:last-child a svg { fill: var(--secondaryColorTools); }
+        }
 
-        background: radial-gradient(var(--thirdColorBg) 70%, #09030e 100%);
-        border-radius: 50%;
-
-        filter: blur(75px);
+        ul li a {
+            svg { 
+                width: var(--widthIcon);
+                height: var(--heightIcon); 
+                transition: transform 0.3s ease-out, scale 0.2s;
+            }
+    
+            &:hover svg { transform: scale(1.25); }
+            &:active svg { scale: 0.775; }
+        } 
     }
+
+    ul { list-style: none; }
 }
 
 main {
-    padding: var(--paddingTopMain) 1rem 1rem 1rem;
+    max-width: 990px;
+
+    padding: 0rem 0rem 1rem;
+
+    margin: 0 13rem;
+
+    align-self: center;
 
     display: flex;
     flex-direction: column;
+
+    section > h2 {
+        font-size: var(--h2Font);
+        color: var(--secondColorBg);
+        background: linear-gradient(170deg, #afa8ce 40%, var(--secondColorBg) 100%);
+        filter: var(--h2Brightness);
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+    } 
+
+    strong { color: var(--primaryColorTools); filter: var(--strongBrightness); }
+}
+
+@media (width < 1100px) { main { margin: 0 7rem; } }
+@media (width < 950px) { main { margin: 0 3rem; } }
+@media (width < 775px) {
+    main { margin: 0 1.05rem; } 
+    body > .coding { display: none; }
 }
