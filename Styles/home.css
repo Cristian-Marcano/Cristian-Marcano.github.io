@@ -1,4 +1,10 @@
 .home {
+    height: 100vh;
+
+    padding: var(--paddingTopMain) 0 0;
+
+    position: relative;
+
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -9,7 +15,7 @@
         flex-direction: column;
         gap: 2rem;
 
-        div {
+        .title {
             width: auto;
             height: 6.5rem;
 
@@ -22,7 +28,7 @@
                 position: absolute;
                 z-index: -1;
     
-                background: radial-gradient(var(--thirdColorBg) 70%, #09030e 100%);
+                background: radial-gradient(var(--h1SpanColorBgGradient) 70%, #0000 100%);
                 border-radius: 50%;
     
                 filter: blur(100px);
@@ -32,11 +38,10 @@
                 text-align: center;
                 font-size: var(--h1Font);
                 font-family: system-ui;
-
-                z-index: 1;
+                color: #fff;
     
-                span { 
-                    font-size: 5rem;
+                > span { 
+                    font-size: var(--h1SpanFont);
                     color: var(--primaryColorTools);
                     background: linear-gradient(170deg, #ffdb79, var(--primaryColorToolsDark));
                     -webkit-text-fill-color: transparent;
@@ -47,23 +52,23 @@
 
         h2 {
             text-align: center;
-            color: #f8f8f8;
-            background: linear-gradient(350deg, var(--thirdColorBg), #f8f8f8);
+            color: var(--h2ColorHome2);
+            background: linear-gradient(350deg, var(--h2ColorHome1), var(--h2ColorHome2));
             -webkit-text-fill-color: transparent;
             background-clip: text;
             
-            font-size: var(--h2Font);
+            font-size: var(--h2HomeFont);
             font-family: system-ui;
         }
 
         p {
-            width: 76ch;
+            max-width: 61ch;
 
             margin-top: 0.6rem;
-            color: #cbcbcb;
+            color: var(--pColorHome);
 
             text-align: center;
-            font-size: var(--paragraphFont);
+            font-size: var(--paragraphHomeFont);
         }
 
         .resume {
@@ -71,10 +76,13 @@
             height: auto;
 
             display: flex;
-            justify-content: center;
-            gap: 1rem;
+            flex-direction: column;
+            align-items: center;
+            gap: 1.15rem;
 
-            a {
+            .contact__list { gap: 1.45rem; }
+
+            a[role="button"] {
                 width: auto;
                 height: 3rem;
 
@@ -86,8 +94,8 @@
                 align-items: center;
                 gap: 0.5rem;
 
-                color: #fff;
-                background: linear-gradient(150deg, #b8b8b852 20%, #0000 100%);
+                color: var(--aColorResume);
+                background: linear-gradient(150deg, var(--aColorBgResume1) 20%, var(--aColorBgResume2) 100%);
                 background-size: 120%;
                 border-radius: 1.95rem;
 
@@ -99,12 +107,14 @@
 
                 cursor: pointer;
 
+                transition: transform 0.2s;
+
                 > span, i svg {
                     position: relative;
                     z-index: 1;
                 }
 
-                i svg { width: auto; height: var(--paragraphFont); fill: #fff; }
+                i svg { width: auto; height: 1.4rem; fill: var(--aColorResume); }
 
                 &::before {
                     content: "";
@@ -116,28 +126,32 @@
                     left: 0;
                     
                     border-radius: inherit;
-                    background: linear-gradient(
+                    /* background: linear-gradient(
                         82.3deg,
                         var(--thirdColorBg) 6.1%,
                         #577ccc 37.8%,
                         #114fa0 94.3%
-                    );
+                    ); */
+
+                    background: var(--aColorBgResumeGradient);
+                    /* filter: brightness(1.28); */
 
                     transform: scaleX(0);
                     transform-origin: 0 50%;
 
-                    transition: transform 0.475s;
+                    transition: transform 0.425s;
                 }
 
                 &:hover::before { transform: scaleX(1); }
+
+                &:active {  transform: scale(0.9); }
             }
         }
     }
 
     > div {
         position: absolute;
-        top: 90vh;
-
+        bottom: 0;
         a {
             display: flex;
             flex-direction: column;
@@ -171,5 +185,20 @@
     50% {
         transform: none;
         animation-timing-function: cubic-bezier(0,0,.2,1);
+    }
+}
+
+@media (width >= 1100px) { .home article .resume .contact__list { display: none; } }
+
+@media (width < 650px) {
+    .home article {  gap: 1.7rem; }
+    .home article .title { height: 4.8rem; }
+}
+
+@media (height < 650px) {
+    .home { 
+        height: auto; 
+
+        > div { display: none; }
     }
 }
