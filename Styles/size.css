@@ -1,15 +1,27 @@
 :root {
-    --paddingTopMain: 11rem;
+    --paddingTopMain: 18.75vh;
+    --paddingLeftProjectsContent: 1.2rem;
 
     --h1Font: 4rem;
-    --h2Font: 3.2rem;
+    --h1SpanFont: 5rem;
+    --h2HomeFont: 3.2rem;
+    --h2Font: 2.25rem;
+    --h3Font: 1.75rem;
+    --h4Font: 1.4rem;
+    --h4SpanFont: 1.8rem;
 
     --listFont: 1.5rem;
 
-    --paragraphFont: 1.4rem;
+    --paragraphHomeFont: 1.4rem;
+    --paragraphProjectsFont: 1.4rem;
+    --paragraphAboutFont: 1.2rem;
+
+    --sloganFont: 1.1rem;
 
     --widthIcon: auto;
     --heightIcon: 1.8rem;
+
+    --heightIconSkills: 3rem;
 
     --widthCoding01: 30%;
     --widthCoding02: 23%;
@@ -19,4 +31,27 @@
     --widthCoding06: 23%;
 
     --heightCoding: 1.8rem;
+}
+
+@media (width < 650px) {
+    :root {
+        --h1Font: 2.6rem;
+        --h1SpanFont: 3.4rem;
+        --h2HomeFont: 2.3rem;
+        --paragraphHomeFont: 1.25rem;
+        --paragraphProjectsFont: 1.25rem;
+    }
+}
+
+@media (width < 450px) {
+    :root {
+        --h1Font: 2.1rem;
+        --h1SpanFont: 2.8rem;
+        --h2HomeFont: 2rem;
+        --h4Font: 1.2rem;
+        --h4SpanFont: 1.6rem;
+        --paragraphAboutFont: 1.095rem;
+        --listFont: 1.3rem;
+        --sloganFont: 0.975rem;
+    }
 }
