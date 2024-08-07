@@ -1,9 +1,15 @@
 :root {
-    --firstColorBg: #090c1a;
     --secondColorBg: #2b2948;
     --thirdColorBg: #283247;
 
-    --themeScroll: dark;
+    --navColorBgMobile: #f0f0f07d;
+    --menuColorBgMobile: #283247c9;
+
+    --h2ColorHome1: #283247;
+
+    --pColorHome: #e0e0e0;
+
+    --aColorResume: #fff;
 
     --primaryColorTools: #daa520;
     --primaryColorToolsLight: #ffc853;
