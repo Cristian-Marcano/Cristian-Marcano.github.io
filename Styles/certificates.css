@@ -1,6 +1,4 @@
 .certificates {
-    /* width: 100%; */
-    /* max-width: 990px; */
     height: auto;
 
     margin-top: 3.4rem;
@@ -11,7 +9,6 @@
     gap: 1.5rem;
 
     .certificates__wrap {
-        /* max-width: 990px; */
         height: auto;
 
         display: flex;
@@ -22,8 +19,7 @@
         .certificate {
             width: 320px;
             height: auto;
-/* 
-            background: linear-gradient(170deg, var(--thirdColorBg) 40%, var(--secondColorBg) 100%); */
+
             background: #283247;
             border-radius: 1.2rem;
 
