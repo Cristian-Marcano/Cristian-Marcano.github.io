@@ -1,0 +1,123 @@
+.projects {
+    width: 100%;
+    height: auto;
+
+    padding: 0 0 5rem 0;
+
+    margin-top: 10vh;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3.4rem;
+
+    background-image: url(../Archives/hero.svg);
+    background-position: center top;
+    background-repeat: repeat-y;
+
+    .project {
+        height: auto;
+
+        position: relative;
+
+        display: flex;
+        gap: 1.4rem;
+
+        &:hover picture img { transform: scale(1.15); }
+
+        picture { 
+            width: auto;
+            max-width: 451px;
+            height: auto;
+
+            align-self: flex-start;
+
+            display: flex;
+
+            box-shadow: 0 10px 20px 0 #2b2948a1;
+            border-radius: 0.6rem;
+
+            overflow: clip;
+
+            img { 
+                width: 100%;
+                height: auto;
+
+                cursor: pointer;
+
+                object-fit: cover;
+                object-position: top;
+
+                transition: transform 0.275s ease-in-out;
+            }
+        }
+
+        .content {
+            width: auto;
+            height: auto;
+
+            padding: 1.2rem 0;
+
+            align-self: flex-start;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+
+            > * { padding-left: var(--paddingLeftProjectsContent); /*border-left: 5px solid transparent;*/ }
+
+            h3 {
+                color: var(--primaryColorTools);
+                font-family: system-ui;
+                font-size: var(--h3Font);
+                border-left: 5px solid var(--primaryColorTools);
+                filter: var(--h3Brightness);
+            }
+
+            p {
+                font-size: var(--paragraphProjectsFont);
+                line-height: 1.18;
+                color: var(--pColorProjects);
+            }
+
+            ul {
+                display: flex;
+                gap: 1.5rem;
+                
+                li {
+                    padding: 0.25rem 0.5rem;
+
+                    display: block;
+
+                    border-radius: 0.3rem;
+                    background: #28324769;
+
+                    font-size: 1.125rem;
+                }
+            }
+
+            .links {
+                align-self: flex-end;
+
+                display: flex;
+                gap: 1.2rem;
+
+                a svg { 
+                    width: var(--widthIcon);
+                    height: var(--heightIcon); 
+                    fill: var(--fillColorLinks);
+
+                    transition: scale 0.2s;
+                }
+
+                a:active svg { scale: 0.775; }
+            }
+        }
+    }
+}
+
+@media (width < 775px ) {
+    .projects .project {
+        flex-direction: column;
+        picture { align-self: center; max-width: none; }
+    }
+}
