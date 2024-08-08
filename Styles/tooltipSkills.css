@@ -1,0 +1,284 @@
+.frontend {
+    ul li:first-child { 
+        background: #EF652A;
+        &::before { box-shadow: 0 0 12px 0 #ef652ac0; }
+        &:hover::before {
+            border-color: #EF652A;
+            box-shadow: 0 0 25px 0 #ef652ac0;
+        }
+        .tooltip {
+            color: #EF652A;
+            border: 1px solid #EF652A;
+        }
+    }
+    ul li:nth-child(2) { 
+        background: #30A9DC;
+        &::before { box-shadow: 0 0 12px 0 #30a9dcc0; }
+        &:hover::before {
+            border-color: #30A9DC;
+            box-shadow: 0 0 25px 0 #30a9dcc0;
+        }
+        .tooltip {
+            color: #30A9DC;
+            border: 1px solid #30A9DC;
+        }
+    }
+    ul li:nth-child(3) {
+        background: #F0DB4F;
+        &::before { box-shadow: 0 0 12px 0 #f0db4fc0; }
+        &:hover::before {
+            border-color: #F0DB4F;
+            box-shadow: 0 0 25px 0 #f0db4fc0;
+        }
+        .tooltip {
+            color: #F0DB4F;
+            border: 1px solid #F0DB4F;
+        }
+    }
+    ul li:nth-child(4) {
+        background: #8003EE;
+        &::before { box-shadow: 0 0 12px 0 #8003EEc0; }
+        &:hover::before {
+            border-color: #A033FE;
+            box-shadow: 0 0 25px 0 #8003EEc0;
+        }
+        .tooltip {
+            color: #A033FE;
+            border: 1px solid #A033FE;
+        }
+    }
+    ul li:nth-child(5) {
+        background: #B05080;
+        &::before { box-shadow: 0 0 12px 0 #b05080c0; }
+        &:hover::before {
+            border-color: #C06090;
+            box-shadow: 0 0 25px 0 #b05080c0;
+        }
+        .tooltip {
+            color: #C06090;
+            border: 1px solid #C06090;
+        }
+    }
+    ul li:nth-child(6) {
+        background: #3178C6;
+        &::before { box-shadow: 0 0 12px 0 #3178c6c0; }
+        &:hover::before {
+            border-color: #347BC9;
+            box-shadow: 0 0 25px 0 #3178c6c0;
+        }
+        .tooltip {
+            color: #347BC9;
+            border: 1px solid #347BC9;
+        }
+    }
+    ul li:nth-child(7) {
+        background: #A6120D;
+        &::before { box-shadow: 0 0 12px 0 #a6120dc0; }
+        &:hover::before {
+            border-color: #DD1B16;
+            box-shadow: 0 0 25px 0 #a6120dc0;
+        }
+        .tooltip {
+            color: #DD1B16;
+            border: 1px solid #DD1B16;
+        }
+    }
+    ul li:nth-child(8) {
+        background: #45596E;
+        &::before { box-shadow: 0 0 12px 0 #45596ec0; }
+        &:hover::before {
+            border-color: #42B883;
+            box-shadow: 0 0 25px 0 #45596ec0;
+        }
+        .tooltip {
+            color: #42B883;
+            border: 1px solid #42B883;
+        }
+    }
+}
+
+.backend {
+    ul li:first-child {
+        background: #326eaa;
+        &::before { box-shadow: 0 0 12px 0 #326eaac0; }
+        &:hover::before {
+            border-color: #4E87D0;
+            box-shadow: 0 0 25px 0 #326eaac0;
+        }
+        .tooltip {
+            color: #4E87D0;
+            border: 1px solid #4E87D0;
+        }
+    }
+    ul li:nth-child(2) {
+        background: #307C20;
+        &::before { box-shadow: 0 0 12px 0 #307c20c0; }
+        &:hover::before {
+            border-color: #539E43;
+            box-shadow: 0 0 25px 0 #307c20c0;
+        }
+        .tooltip {
+            color: #539E43;
+            border: 1px solid #539E43;
+        }
+    }
+    ul li:nth-child(3) {
+        background: #C7C7C7;
+        &::before { box-shadow: 0 0 12px 0 #c7c7c7c0; }
+        &:hover::before {
+            border-color: #FFFFFF;
+            box-shadow: 0 0 25px 0 #c7c7c7c0;
+        }
+        .tooltip {
+            color: #FFFFFF;
+            border: 1px solid #FFFFFF;
+        }
+    }
+    ul li:nth-child(4) {
+        background: #daa520;
+        &::before { box-shadow: 0 0 12px 0  #daa520c0; }
+        &:hover::before {
+            border-color: #daa520;
+            box-shadow: 0 0 25px 0 #daa520c0;
+        }
+        .tooltip {
+            color: #daa520;
+            border: 1px solid #daa520;
+        }
+    }
+    ul li:nth-child(5) {
+        background: #EAEAEA;
+        &::before { box-shadow: 0 0 12px 0 #eaeaeac0; }
+        &:hover::before {
+            border-color: #FFFFFF;
+            box-shadow: 0 0 25px 0 #eaeaeac0;
+        }
+        .tooltip {
+            color: #FFFFFF;
+            border: 1px solid #FFFFFF;
+        }
+    }
+    ul li:nth-child(6) {
+        background: #00758F;
+        &::before { box-shadow: 0 0 12px 0 #00758fc0; }
+        &:hover::before {
+            border-color: #00758F;
+            box-shadow: 0 0 25px 0 #00758fc0;
+        }
+        .tooltip {
+            color: #00758F;
+            border: 1px solid #00758F;
+        }
+    }
+    ul li:nth-child(7) {
+        background: #336791;
+        &::before { box-shadow: 0 0 12px 0 #336791c0; }
+        &:hover::before {
+            border-color: #336791;
+            box-shadow: 0 0 25px 0 #336791c0;
+        }
+        .tooltip {
+            color: #336791;
+            border: 1px solid #336791;
+        }
+    }
+}
+
+.tools {
+    ul li:first-child {
+        background: #DE4C36B0;
+        &::before { box-shadow: 0 0 12px 0 #DE4C3680; }
+        &:hover::before {
+            border-color: #DE4C36;
+            box-shadow: 0 0 25px 0 #DE4C36A0;
+        }
+        .tooltip {
+            color: #DE4C36;
+            border: 1px solid #DE4C36;
+        }
+    }
+    ul li:nth-child(2) {
+        background: #FAFBFCE0;
+        &::before { box-shadow: 0 0 12px 0 #fafbfca0; }
+        &:hover::before {
+            border-color: #FAFBFC;
+            box-shadow: 0 0 25px 0 #fafbfca0;
+        }
+        .tooltip {
+            color: #FAFBFC;
+            border: 1px solid #FAFBFC;
+        }
+    }
+    ul li:nth-child(3) {
+        background: #CC3534C0;
+        &::before { box-shadow: 0 0 12px 0 #cc353490; }
+        &:hover::before {
+            border-color: #CC3534;
+            box-shadow: 0 0 25px 0 #cc353490;
+        }
+        .tooltip {
+            color: #CC3534;
+            border: 1px solid #CC3534;
+        }
+    }
+    ul li:nth-child(4) {
+        background: #2d7cb1;
+        &::before { box-shadow: 0 0 12px 0 #2d7cb1c0; }
+        &:hover::before {
+            border-color: #3592cf;
+            box-shadow: 0 0 25px 0 #2d7cb1c0;
+        }
+        .tooltip {
+            color: #3592cf;
+            border: 1px solid #3592cf;
+        }
+    }
+    ul li:nth-child(5) {
+        background: #BABABA;
+        &::before { box-shadow: 0 0 12px 0 #bababac0; }
+        &:hover::before {
+            border-color: #FFFFFF;
+            box-shadow: 0 0 25px 0 #bababac0;
+        }
+        .tooltip {
+            color: #FFFFFF;
+            border: 1px solid #FFFFFF;
+        }
+    }
+    ul li:nth-child(6) {
+        background: #950101;
+        &::before { box-shadow: 0 0 12px 0 #950101c0; }
+        &:hover::before {
+            border-color: #C51111;
+            box-shadow: 0 0 25px 0 #950101c0;
+        }
+        .tooltip {
+            color: #C51111;
+            border: 1px solid #C51111;
+        }
+    }
+    ul li:nth-child(7) {
+        background: #EF5B25;
+        &::before { box-shadow: 0 0 12px 0 #ef5b25c0; }
+        &:hover::before {
+            border-color: #EF5B25;
+            box-shadow: 0 0 25px 0 #ef5b25c0;
+        }
+        .tooltip {
+            color: #EF5B25;
+            border: 1px solid #EF5B25;
+        }
+    }
+    ul li:nth-child(8) {
+        background: #74AA9C;
+        &::before { box-shadow: 0 0 12px 0 #74aa9cc0; }
+        &:hover::before {
+            border-color: #74AA9C;
+            box-shadow: 0 0 25px 0 #74aa9cc0;
+        }
+        .tooltip {
+            color: #74AA9C;
+            border: 1px solid #74AA9C;
+        }
+    }
+}
