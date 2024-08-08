@@ -1,0 +1,107 @@
+.certificates {
+    /* width: 100%; */
+    /* max-width: 990px; */
+    height: auto;
+
+    margin-top: 3.4rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+
+    .certificates__wrap {
+        /* max-width: 990px; */
+        height: auto;
+
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: center;
+        gap: 0.93rem;
+
+        .certificate {
+            width: 320px;
+            height: auto;
+/* 
+            background: linear-gradient(170deg, var(--thirdColorBg) 40%, var(--secondColorBg) 100%); */
+            background: #283247;
+            border-radius: 1.2rem;
+
+            a {
+                padding: 2rem 1.35rem;
+
+                position: relative;
+
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+
+                border-radius: inherit;
+
+                color: #f8f8f8;
+                text-decoration: none;
+
+                overflow: hidden;
+
+                &::before {
+                    content: '';
+                    width: 128px;
+                    height: auto;
+
+                    aspect-ratio: 1/1;
+
+                    position: absolute;
+                    z-index: 0;
+                    top: -80px;
+                    right: -70px;
+
+                    display: block;
+
+                    border-radius: 50%;
+
+                    transition: transform 0.5s 0.05s ease-out;
+                }
+
+                &:hover {
+                    &::before { transform: scale(10); }
+                    svg { opacity: 1; transform: translateY(-5px); }
+                }
+
+                h3 { font-size: var(--listFont); z-index: 1; }
+
+                .certificate__footer {
+                    z-index: 1;
+                    
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+
+                    time { font-weight: 600; }
+                }
+
+                svg { 
+                    height: 1.3rem; 
+                    fill: #dadada; 
+                    opacity: 0; 
+                    transform: translateY(10px);
+                    transition: opacity 0.15s 0.4s ease-out, transform 0.15s 0.4s ease-out;
+                }
+            }
+
+            &:first-child a::before { background: var(--primaryColorTools); }
+
+            &:nth-child(2) a::before { background: #0065b8; }
+
+            &:nth-child(3) a::before { background: #EF5B25; }
+
+            &:nth-child(4) a::before { background: #27b14a;}
+        }
+    }
+}
+
+@media (width < 690px) {
+    .certificates .certificates__wrap .certificate {
+        max-width: 420px;
+        width: auto;
+    }
+}
