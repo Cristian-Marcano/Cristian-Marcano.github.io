@@ -1,11 +1,11 @@
-header nav {
+header .desktop {
     width: auto;
     height: auto;
 
     position: fixed;
     top: 50%;
     right: 3rem;
-    z-index: 1;
+    z-index: 3;
 
     transform: translateY(-50%);
 
@@ -23,11 +23,13 @@ header nav {
         li {
             position: relative;
 
-            opacity: 0.4;
+            opacity: 0.5;
+
+            transition: transform 0.5s ease, opacity 0.5s ease;
 
             a { color: var(--primaryColorTools); text-decoration: none; }
 
-            &.active { opacity: 1; transform: translateX(-7rem); }
+            &.active { opacity: 1; transform: translateX(-6.25rem); }
 
             &::after {
                 content: '';
@@ -43,5 +45,140 @@ header nav {
                 transform: translate(14rem, -50%);
             }
         }
+    }
+}
+
+header .mobile { display: none; }
+
+@media (width < 1100px) {
+    header { 
+        max-width: 990px;
+
+        margin: 0.65rem auto 0;
+
+        position: fixed;
+        z-index: 3;
+
+        align-self: center;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .desktop { display: none; }
+
+        .mobile {
+            padding: 0 0.75rem;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            background-color: #f0f0f000;
+            backdrop-filter: blur(8px);
+            border-radius: 100rem;
+
+            font-size: 0.925rem;
+            font-weight: 500;
+            line-height: 1.25rem;
+
+            animation: nav 1s linear both;
+            animation-timeline: scroll();
+            animation-range: 0 100px;
+
+            > a {
+                padding: 0.5rem;
+
+                position: relative;
+
+                display: block;
+
+                color: var(--navColorMobile);
+                font-family: system-ui;
+
+                text-decoration: inherit;
+
+                transition: color 0.3s ease-out;
+
+                &.active { color: var(--primaryColorTools); }
+            }
+
+            .mobile__menu { 
+                margin: 0 0.25rem;
+                position: relative;
+
+                button {
+                    display: flex;
+                    outline: none;
+                    border-style: none;
+                    appearance: none;
+                    background: transparent;
+
+                    svg { 
+                        width: var(--widthIcon); 
+                        height: 1.25rem;
+                        fill: var(--navColorMobile);
+
+                        transition: transform 0.15s;
+
+                        &:not(.selected) { transform: scale(0); }
+                        &:last-child { position: absolute; }
+                    }
+                }
+
+                .menu {
+                    min-width: 6rem;
+
+                    padding: 0.25rem;
+
+                    position: absolute;
+                    top: 2rem;
+                    right: 0; 
+
+                    display: inline;
+
+                    border-radius: 0.375rem;
+                    background: var(--menuColorBgMobile);
+                    backdrop-filter: blur(100px);
+                    border: 1px solid var(--navColorBgMobile);
+                    box-shadow: 0 3px 10px 0 #00000080;
+
+                    animation: scale-up-center .15s cubic-bezier(.25,.46,.45,.94) both;
+
+                    &.hidden { display: none; }
+
+                    ul {
+                        position: relative;
+
+                        display: flex;
+                        justify-content: space-around;
+
+                        li:first-child a svg { stroke: var(--secondaryColorTools); }
+                        li:last-child a {
+                            display: flex;
+                            svg {
+                                fill: var(--primaryColorTools);
+                                transition: transform 0.15s;
+    
+                                &:not(.selected) { transform: scale(0); }
+                                &:last-child { position: absolute; }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@keyframes scale-up-center {
+    from { transform: scale(0.8); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}
+
+@keyframes nav {
+    100% { 
+        background: var(--navColorBgMobile); 
+        box-shadow: 0 10px 15px -3px rgb(0 0 0 / .1), 0 4px 6px -4px rgb(0 0 0 / .1);
     }
 }
