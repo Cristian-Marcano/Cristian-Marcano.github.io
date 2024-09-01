@@ -7,7 +7,7 @@ const buttonMenu = document.querySelector('.mobile__menu > button');
 const menuMobile = document.querySelector('.menu');
 const themeButton = document.querySelectorAll('ul li a[title*="Theme"]');
 const themeDOM = document.querySelector(':root');
-// const translateButton = document.querySelectorAll('ul li a[title*="Translate"]');
+const translateButton = document.querySelectorAll('ul li a[title*="Translate"]');
 
 const themeDark = {
     firstColorBg: '#090c1a',
@@ -75,6 +75,13 @@ const getThemePreference = () => {
     return (window.matchMedia("(prefers-color-scheme: dark)").matches) ? "dark": "light";
 }
 
+const getLanguagePreference = () => {
+    if (typeof localStorage !== "undefined")
+        return localStorage.getItem("language") ?? 'es';
+
+    return 'es';
+}
+
 const updateTheme = (theme) => {
     if(theme === 'light') {
         themeButton.forEach( i => {
@@ -137,4 +144,13 @@ themeButton.forEach(i => i.addEventListener('click', (e) => {
     theme = (theme==='light') ? 'dark': 'light';
     localStorage.setItem('theme', theme);
     updateTheme(theme);
+}));
+
+let language = getLanguagePreference();
+document.documentElement.setAttribute('lang', language);
+
+translateButton.forEach(i => i.addEventListener('click', (e) => {
+    language = (language === 'en') ? 'es' : 'en';
+    localStorage.setItem('language', language);
+    document.documentElement.setAttribute('lang', language);
 }));
