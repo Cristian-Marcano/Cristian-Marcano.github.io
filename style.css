@@ -1,17 +1,17 @@
-@import url(size.css);
-@import url(colors.css);
+@import url(Styles/size.css);
+@import url(Styles/colors.css);
 
-@import url(navbar.css);
-@import url(aside.css);
-@import url(home.css);
-@import url(projects.css);
-@import url(skills.css);
-@import url(tooltipSkills.css);
-@import url(certificates.css);
-@import url(about.css);
-@import url(footer.css);
+@import url(Styles/navbar.css);
+@import url(Styles/aside.css);
+@import url(Styles/home.css);
+@import url(Styles/projects.css);
+@import url(Styles/skills.css);
+@import url(Styles/tooltipSkills.css);
+@import url(Styles/certificates.css);
+@import url(Styles/about.css);
+@import url(Styles/footer.css);
 
-@import url(codeAnimation.css);
+@import url(Styles/codeAnimation.css);
 
 * {
     margin: 0;
