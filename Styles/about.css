@@ -24,7 +24,10 @@
             flex-direction: column;
             gap: 1rem;
 
-            p { font-size: var(--paragraphAboutFont); }
+            p { 
+                color: var(--pColorProjects);
+                font-size: var(--paragraphAboutFont); 
+            }
         } 
 
         picture {

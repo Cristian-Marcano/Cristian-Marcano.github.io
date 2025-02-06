@@ -56,7 +56,10 @@ footer {
             }
         }
 
-        .slogan { font-size: var(--sloganFont); }
+        .slogan { 
+            color: var(--pColorProjects);
+            font-size: var(--sloganFont);
+        }
     }
 
     strong { color: var(--secondaryColorTools); filter: brightness(1.38); }
