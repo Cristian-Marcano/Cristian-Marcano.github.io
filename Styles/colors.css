@@ -1,15 +1,38 @@
 :root {
+    --firstColorBg: #090c1a;
     --secondColorBg: #2b2948;
     --thirdColorBg: #283247;
 
+    --navColorMobile: #e5e7eb;
     --navColorBgMobile: #f0f0f07d;
     --menuColorBgMobile: #283247c9;
 
+    --colorCoding: #dbdbdb5a;
+
+    --h1SpanColorBgGradient: #283247;
+
     --h2ColorHome1: #283247;
+    --h2ColorHome2: #eaeaea;
 
     --pColorHome: #e0e0e0;
 
     --aColorResume: #fff;
+    --aColorBgResume1: #b8b8b852;
+    --aColorBgResume2: #0000;
+    --aColorBgResumeGradient: linear-gradient(82.3deg, #545164 2%, #524cb3 115%);
+    
+
+    --h2Brightness: brightness(1.28);
+    --h3Brightness: brightness(1.125);
+
+    --pColorProjects: #f0f0f0;
+    --fillColorLinks: #e0e0e0;
+
+    --colorBgSkills: #28324727;
+    --colorBorderSkills: #1f273a;
+
+    --strongBrightness: brightness(1.24);
+    --colorBgGradientFooter: #0000;
 
     --primaryColorTools: #daa520;
     --primaryColorToolsLight: #ffc853;
