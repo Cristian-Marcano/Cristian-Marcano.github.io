@@ -36,22 +36,28 @@ aside {
         right: 3rem;
         z-index: 1;
 
-        ul {
+        div {
             position: relative;
 
             display: flex;
             gap: 1.5rem;
 
-            li:first-child a svg { stroke: var(--secondaryColorTools); }
-            li:last-child a {
-                display: flex;
-                svg { 
-                    fill: var(--primaryColorTools); 
-                    transition: transform 0.215s ease-out, scale 0.2s;
-                    &:not(.selected) { transform: scale(0); } 
+            a {
+                svg {
+                    width: var(--widthIcon);
+                    height: var(--heightIcon);
+
+                    stroke: var(--secondaryColorTools);
+
+                    transition: transform 0.3s ease-out, scale 0.2s;
                 }
-                svg:last-child { position: absolute; }
-            } 
+
+                &:hover svg { 
+                    cursor: pointer;
+                    transform: scale(1.25);
+                }
+                &:active svg { scale: 0.775; }
+            }
 
             &::before { 
                 content: '';
