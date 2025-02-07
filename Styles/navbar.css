@@ -101,70 +101,10 @@ header .mobile { display: none; }
                 transition: color 0.3s ease-out;
 
                 &.active { color: var(--primaryColorTools); }
-            }
 
-            .mobile__menu { 
-                margin: 0 0.25rem;
-                position: relative;
-
-                button {
-                    display: flex;
-                    outline: none;
-                    border-style: none;
-                    appearance: none;
-                    background: transparent;
-
-                    svg { 
-                        width: var(--widthIcon); 
-                        height: 1.25rem;
-                        fill: var(--navColorMobile);
-
-                        transition: transform 0.15s;
-
-                        &:not(.selected) { transform: scale(0); }
-                        &:last-child { position: absolute; }
-                    }
-                }
-
-                .menu {
-                    min-width: 6rem;
-
-                    padding: 0.25rem;
-
-                    position: absolute;
-                    top: 2rem;
-                    right: 0; 
-
-                    display: inline;
-
-                    border-radius: 0.375rem;
-                    background: var(--menuColorBgMobile);
-                    backdrop-filter: blur(100px);
-                    border: 1px solid var(--navColorBgMobile);
-                    box-shadow: 0 3px 10px 0 #00000080;
-
-                    animation: scale-up-center .15s cubic-bezier(.25,.46,.45,.94) both;
-
-                    &.hidden { display: none; }
-
-                    ul {
-                        position: relative;
-
-                        display: flex;
-                        justify-content: space-around;
-
-                        li:first-child a svg { stroke: var(--secondaryColorTools); }
-                        li:last-child a {
-                            display: flex;
-                            svg {
-                                fill: var(--primaryColorTools);
-                                transition: transform 0.15s;
-    
-                                &:not(.selected) { transform: scale(0); }
-                                &:last-child { position: absolute; }
-                            }
-                        }
-                    }
+                &:last-child {
+                    svg { transition: scale 0.2s; }
+                    &:active svg { scale: 0.775; }
                 }
             }
         }
