@@ -57,6 +57,7 @@ footer {
         }
 
         .slogan { 
+            text-align: center;
             color: var(--pColorProjects);
             font-size: var(--sloganFont);
         }
